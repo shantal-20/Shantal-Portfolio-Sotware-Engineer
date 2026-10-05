@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS Link -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icon Link -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="src/assets/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-bar-container fixed-top">
+        <nav class="nav-bar p-2">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#hero-section"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-section">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tech-section">Stack</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio-section">Portfolio</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#project-section">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience-section">Experience</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="btn btn-danger contact-me-btn" href="#">
+                <i class="bi bi-telephone me-2"></i>Contact Me
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero-section: displaying name, my role and where I specialized -->
+      <section class="hero-section" id="hero-section">
+        <div class="information-container">
+          <h2 class="name">Shantal I. Gregorio</h2>
+          <h1 class="hero-title-badge">Software Engineer</h1>
+          <h2 class="hero-subtitle">Backend Developer | PHP, JavaScript</h2>
+          <p class="hero-tagline">
+            Delivering reliable web apps with PHP, JavaScript, and MySQL —
+            always learning and growing
+          </p>
+        </div>
+        <div class="socials">
+          <a
+            href="https://www.facebook.com/shantal.gregorio.2024"
+            class="socials-link facebook"
+            target="_blank"
+          >
+            <i class="bi bi-facebook fs-3"></i>
+          </a>
+          <a
+            href="https://github.com/shantal-20"
+            target="_blank"
+            class="socials-link github"
+          >
+            <i class="bi bi-github fs-3"></i>
+          </a>
+          <a
+            href="https://wa.me/09204619437"
+            class="socials-link whatsapp"
+            target="_blank"
+          >
+            <i class="bi bi-whatsapp fs-3"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shtnl/"
+            target="_blank"
+            class="socials-link linkedin"
+          >
+            <i class="bi bi-linkedin fs-3"></i>
+          </a>
+        </div>
+
+        <div class="hero-button-container">
+          <button class="btn btn-primary" id="view-projects-btn" type="button">
+            <i class="bi bi-folder2 me-1"></i> View Projects
+          </button>
+          <button
+            class="btn btn-warning"
+            id="download-resume-btn"
+            type="button"
+          >
+            <i class="bi bi-download me-1"></i>
+            Download CV
+          </button>
+        </div>
+      </section>
+
+      <!-- About Me Section: Shows a short introduction and my image -->
+      <section id="about-section" class="about-section">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="section-label">About me</span>
+            <h2 class="section-title mt-1">Get to Know Who I Am</h2>
+          </div>
+
+          <div class="about-content">
+            <div class="about-description">
+              <p class="about-text">
+                I am a passionate fresh graduate specializing in
+                <strong>backend development</strong>, with hands-on experience
+                in <strong>PHP, MySQL, and JavaScript</strong>. I am currently
+                exploring modern frameworks such as <em>Laravel</em> to expand
+                my skills, deliver more scalable solutions, and learn the proper
+                structure in writing <strong>RESTful APIs</strong>.
+              </p>
+
+              <p class="about-text">
+                During my internship at <strong>VastResult Inc.</strong>, I
+                developed skills in
+                <strong>SEO keyword optimization</strong> and gained experience
+                in building <strong>business websites</strong>. I also
+                contributed to <strong>content creation</strong> and
+                <strong>graphic design</strong> using tools such as
+                <em>WordPress</em> and <em>Canva</em>, ensuring that the site
+                effectively showcased products and services. Prior to that, I
+                worked with my groupmates on our
+                <strong>capstone project, Mamyr</strong> — an event management
+                system — where I served as <strong>backend developer</strong>. I
+                implemented <strong>CRUD functionality</strong>, built
+                <strong>API‑like endpoints</strong>, and added
+                <strong>email notifications</strong> via <em>PHPMailer</em>,
+                while using <em>JavaScript</em> for dynamic updates (e.g., when
+                users cancel a reservation or submit a review, changes are
+                instantly shown without refreshing the page).
+              </p>
+
+              <p class="about-text">
+                To achieve faster and more reliable results, I leverage
+                <strong>AI tools</strong> for <em>coding assistance</em>,
+                <em>debugging</em>, and <em>productivity optimization</em>.
+                Beyond coding, I enjoy <strong>watching dramas</strong>,
+                <strong>gaming</strong>, and exploring new ideas that inspire me
+                to create better web applications.
+              </p>
+
+              <div class="about-actions">
+                <span>Want to know more about my experience?</span>
+
+                <a
+                  href="assets/files/Shantal-Gregorio-Resume.pdf"
+                  class="resume-link link-underline-primary"
+                  id="download-resume"
+                  download
+                >
+                  Download My CV <i class="bi bi-download me-2"></i>
+                </a>
+              </div>
+
+              <div class="about-highlights mt-4">
+                <div class="highlight-card skills">
+                  <p class="label">Skills Highlight:</p>
+                  <div class="skills">
+                    <span class="badge">PHP</span>
+                    <span class="badge">MySQL</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">Willingness to Learn</span>
+                  </div>
+                </div>
+
+                <div class="highlight-card availability">
+                  <p class="label">Availability:</p>
+                  <span
+                    ><i class="bi bi-circle-fill text-success me-2"></i>Open for
+                    opportunities</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-card">
+              <img
+                src="src/assets/images/Shantal 2x2.jpg"
+                alt="Shantal I. Gregorio"
+                class="profile-image"
+              />
+
+              <div class="profile-details pt-3">
+                <div class="profile-detail">
+                  <span class="profile-label">
+                    <i class="bi bi-person icon-name"></i>
+                    Name
+                  </span>
+
+                  <span class="profile-value">Shantal I. Gregorio </span>
+                </div>
+
+                <div class="profile-detail">
+                  <span class="profile-label">
+                    <i class="bi bi-mortarboard icon-education"></i>
+                    Education
+                  </span>
+
+                  <span class="profile-value">
+                    BS in Information Technology, Cum Laude (2026)</span
+                  >
+                </div>
+
+                <div class="profile-detail">
+                  <span class="profile-label">
+                    <i class="bi bi-telephone icon-contact-info"></i>
+                    Contact Number
+                  </span>
+
+                  <span class="profile-value"> +63 920 461 9437 </span>
+                </div>
+
+                <div class="profile-detail">
+                  <span class="profile-label">
+                    <i class="bi bi-envelope icon-email"></i>
+                    Email
+                  </span>
+
+                  <span class="profile-value">
+                    shantalgregorio.work@gmail.com
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack Section: Shows different tools/technologies I used -->
+      <section id="tech-section" class="tech-stack-section">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="section-label">Tech Stack</span>
+            <h2 class="section-title">Technologies I Use</h2>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio-section" class="tech-stack-section">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="section-label">Portfolio Showcase</span>
+            <h2 class="section-title">Steps Toward Growth</h2>
+            <p class="section-desc">
+              This section brings together the work I’ve done, the knowledge
+              I’ve gained, and the places I’ve contributed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="project-section" class="project-section">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="section-label">My Projects</span>
+            <h2 class="section-title">Things I've Built</h2>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience-section" class="project-section">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="section-label">My Experience</span>
+            <h2 class="section-title">Where I've Been</h2>
+          </div>
+        </div>
+      </section> -->
+    </main>
+
+    <!-- Navigation Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll("section");
+
+        window.addEventListener("scroll", () => {
+          let currentSection = "";
+
+          sections.forEach((sec) => {
+            const sectionTop = sec.offsetTop;
+            const sectionHeight = sec.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+              currentSection = sec.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((nav) => {
+            nav.classList.remove("active");
+            if (nav.getAttribute("href") === "#" + currentSection) {
+              nav.classList.add("active");
+            }
+          });
+        });
+
+        navLinks.forEach((nav) => {
+          nav.addEventListener("click", function () {
+            navLinks.forEach((a) => a.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

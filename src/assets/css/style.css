@@ -1,0 +1,306 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Luckiest Guy";
+  src: url(../fonts/LuckiestGuy-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+/* Navbar */
+
+.nav-bar-container {
+  background-color: #111827;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  min-height: 65px;
+}
+
+.nav-bar .nav-link,
+.nav-bar .contact-me-btn {
+  color: #ffffff;
+  padding: 0.7rem 1.2rem;
+  margin: 0.2rem 0.5rem;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.nav-bar .contact-me-btn {
+  color: #ffffff;
+}
+
+.nav-bar .nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.nav-bar .nav-link.active {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 3px solid #ffffff;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../images/hero-section-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+}
+
+.information-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.information-container .name {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.information-container .hero-title-badge {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 64px;
+  letter-spacing: 4px;
+  background: linear-gradient(190deg, #70baff, #3153b0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.45rem;
+}
+
+.information-container .hero-subtitle {
+  font-size: 35px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.information-container .hero-tagline {
+  font-weight: 400;
+  font-size: 16px;
+  color: #6b7280;
+  max-width: 550px;
+}
+
+.socials {
+  display: grid;
+  grid-template-columns: repeat(4, 48px);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  transition: 0.3s;
+}
+
+.socials-link i {
+  color: #111827;
+  transition: 0.3s;
+}
+
+.socials-link:hover {
+  background: #0d6efd;
+}
+
+.socials-link:hover i {
+  color: #fff;
+}
+
+.hero-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding-top: 1.5rem;
+}
+
+.hero-button-container button {
+  min-width: 180px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+/* Section Heading */
+.section-heading {
+  height: 10vh;
+  justify-content: center;
+}
+
+.section-label {
+  display: inline-block;
+  background-color: #d4e8ff;
+  color: #111827;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #3684fd;
+}
+
+/* About Me Section*/
+.about-section {
+  min-height: 98vh;
+  margin: auto;
+  padding-top: 5.5rem;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-content {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 8.5rem;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+}
+
+.about-description {
+  display: flex;
+  flex-direction: column;
+}
+.about-description .about-text {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.about-highlights {
+  display: flex;
+  gap: 1rem;
+}
+
+.highlight-card {
+  border: 1px solid whitesmoke;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.highlight-card .skills {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.highlight-card:hover {
+  background: #f8f9fa;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skills span {
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  background-color: #3684fd;
+  border-radius: 0.25rem;
+}
+
+.availability span {
+  padding: 0.275rem;
+  border-radius: 0.25rem;
+}
+
+.highlight-card .label {
+  font-weight: 600;
+}
+
+.profile-card {
+  width: 16.5vw;
+}
+
+.profile-image {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.profile-details {
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  border-radius: 0 0 12px 12px;
+}
+
+.profile-detail {
+  margin-bottom: 0.25rem;
+}
+
+.profile-label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.profile-label i {
+  font-size: 1rem;
+}
+
+.profile-value {
+  display: block;
+  margin-left: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.icon-name,
+.icon-education,
+.icon-contact-info,
+.icon-email {
+  color: #0d6efd;
+  margin-right: 6px;
+  font-size: 1.1rem;
+}
+
+/* Project Section */
