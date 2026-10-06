@@ -16,6 +16,12 @@
     />
     <!-- CSS Link -->
     <link rel="stylesheet" href="src/assets/css/style.css" />
+    <!-- Devicon Link -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
   </head>
 
   <body>
@@ -24,21 +30,18 @@
         <nav class="nav-bar p-2">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="#hero-section"
+              <a class="nav-link active" aria-current="page" href="#hero"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about-section">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#tech-section">Stack</a>
+              <a class="nav-link" href="#tech-stack">Stack</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio-section">Portfolio</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#project-section">Project</a>
@@ -47,7 +50,7 @@
               <a class="nav-link" href="#experience-section">Experience</a>
             </li> -->
             <li class="nav-item">
-              <a class="btn btn-danger contact-me-btn" href="#">
+              <a class="btn btn-danger contact-me-btn text-light" href="#">
                 <i class="bi bi-telephone me-2"></i>Contact Me
               </a>
             </li>
@@ -58,20 +61,27 @@
 
     <main>
       <!-- Hero-section: displaying name, my role and where I specialized -->
-      <section class="hero-section" id="hero-section">
-        <div class="information-container">
-          <h2 class="name">Shantal I. Gregorio</h2>
+      <section
+        class="hero d-flex flex-column align-items-center justify-content-center text-center p-2"
+        id="hero"
+      >
+        <div
+          class="information-container d-flex flex-column align-items-center gap-3"
+        >
+          <h2 class="name fs-2 fw-bold">Shantal I. Gregorio</h2>
           <h1 class="hero-title-badge">Software Engineer</h1>
-          <h2 class="hero-subtitle">Backend Developer | PHP, JavaScript</h2>
-          <p class="hero-tagline">
+          <h2 class="hero-subtitle fs-3 fw-semibold">
+            Backend Developer | PHP, JavaScript
+          </h2>
+          <p class="hero-tagline fs-6 fw-normal">
             Delivering reliable web apps with PHP, JavaScript, and MySQL —
             always learning and growing
           </p>
         </div>
-        <div class="socials">
+        <div class="socials gap-3">
           <a
             href="https://www.facebook.com/shantal.gregorio.2024"
-            class="socials-link facebook"
+            class="social-links facebook"
             target="_blank"
           >
             <i class="bi bi-facebook fs-3"></i>
@@ -79,13 +89,13 @@
           <a
             href="https://github.com/shantal-20"
             target="_blank"
-            class="socials-link github"
+            class="social-links github"
           >
             <i class="bi bi-github fs-3"></i>
           </a>
           <a
             href="https://wa.me/09204619437"
-            class="socials-link whatsapp"
+            class="social-links whatsapp"
             target="_blank"
           >
             <i class="bi bi-whatsapp fs-3"></i>
@@ -93,18 +103,24 @@
           <a
             href="https://www.linkedin.com/in/shtnl/"
             target="_blank"
-            class="socials-link linkedin"
+            class="social-links linkedin"
           >
             <i class="bi bi-linkedin fs-3"></i>
           </a>
         </div>
 
-        <div class="hero-button-container">
-          <button class="btn btn-primary" id="view-projects-btn" type="button">
+        <div
+          class="hero-button-container d-flex justify-content-center gap-3 pt-3"
+        >
+          <button
+            class="btn btn-primary fw-medium rounded"
+            id="view-projects-btn"
+            type="button"
+          >
             <i class="bi bi-folder2 me-1"></i> View Projects
           </button>
           <button
-            class="btn btn-warning"
+            class="btn btn-warning fw-medium rounded"
             id="download-resume-btn"
             type="button"
           >
@@ -115,15 +131,17 @@
       </section>
 
       <!-- About Me Section: Shows a short introduction and my image -->
-      <section id="about-section" class="about-section">
+      <section id="about" class="about m-auto p-5-5">
         <div class="container">
           <div class="section-heading text-center mb-5">
             <span class="section-label">About me</span>
             <h2 class="section-title mt-1">Get to Know Who I Am</h2>
           </div>
 
-          <div class="about-content">
-            <div class="about-description">
+          <div
+            class="about-content justify-content-center align-items-center align-content-evenly"
+          >
+            <div class="about-description d-flex flex-column">
               <p class="about-text">
                 I am a passionate fresh graduate specializing in
                 <strong>backend development</strong>, with hands-on experience
@@ -175,10 +193,10 @@
                 </a>
               </div>
 
-              <div class="about-highlights mt-4">
+              <div class="about-highlights d-flex gap-3 mt-4">
                 <div class="highlight-card skills">
                   <p class="label">Skills Highlight:</p>
-                  <div class="skills">
+                  <div class="skills d-flex gap-2">
                     <span class="badge">PHP</span>
                     <span class="badge">MySQL</span>
                     <span class="badge">JavaScript</span>
@@ -203,7 +221,7 @@
                 class="profile-image"
               />
 
-              <div class="profile-details pt-3">
+              <div class="profile-details p-3">
                 <div class="profile-detail">
                   <span class="profile-label">
                     <i class="bi bi-person icon-name"></i>
@@ -250,16 +268,289 @@
       </section>
 
       <!-- Tech Stack Section: Shows different tools/technologies I used -->
-      <section id="tech-section" class="tech-stack-section">
+      <section id="tech-stack" class="tech-stack p-5-5">
         <div class="container">
           <div class="section-heading text-center mb-5">
             <span class="section-label">Tech Stack</span>
             <h2 class="section-title">Technologies I Use</h2>
           </div>
+
+          <div class="skill-filters d-flex gap-3 justify-content-evenly">
+            <div class="skill-filter">
+              <label
+                for="all-option"
+                class="btn btn-outline-secondary active w-100"
+                >All</label
+              >
+              <input
+                type="radio"
+                name="skills-options"
+                id="all-option"
+                class="skill-filter-input btn-check"
+                value="all"
+                autocomplete="off"
+              />
+            </div>
+            <div class="skill-filter">
+              <label
+                for="frontend-option"
+                class="btn btn-outline-secondary w-100"
+                >Frontend
+              </label>
+              <input
+                type="radio"
+                name="skills-options"
+                id="frontend-option"
+                value="frontend"
+                class="skill-filter-input btn-check"
+                autocomplete="off"
+              />
+            </div>
+            <div class="skill-filter">
+              <label
+                for="backend-option"
+                class="btn btn-outline-secondary w-100"
+              >
+                Backend
+              </label>
+              <input
+                type="radio"
+                name="skills-options"
+                id="backend-option"
+                value="backend"
+                class="skill-filter-input btn-check"
+                autocomplete="off"
+              />
+            </div>
+            <div class="skill-filter">
+              <label
+                for="programming-option"
+                class="btn btn-outline-secondary w-100"
+                >Programming</label
+              >
+              <input
+                type="radio"
+                name="skills-options"
+                id="programming-option"
+                value="programming"
+                class="skill-filter-input btn-check"
+                autocomplete="off"
+              />
+            </div>
+            <div class="skill-filter">
+              <label
+                for="framework-option"
+                class="btn btn-outline-secondary w-100"
+                >Framework</label
+              >
+              <input
+                type="radio"
+                name="skills-options"
+                id="framework-option"
+                value="framework"
+                class="skill-filter-input btn-check"
+                autocomplete="off"
+              />
+            </div>
+            <div class="skill-filter">
+              <label for="tool-option" class="btn btn-outline-secondary w-100"
+                >Tool</label
+              >
+              <input
+                type="radio"
+                name="skills-options"
+                id="tool-option"
+                value="tool"
+                class="skill-filter-input btn-check"
+                autocomplete="off"
+              />
+            </div>
+            <div class="skill-filter">
+              <label
+                for="learning-option"
+                class="btn btn-outline-secondary w-100"
+                >Learning</label
+              >
+              <input
+                type="radio"
+                name="skills-options"
+                value="learning"
+                id="learning-option"
+                class="skill-filter-input btn-check"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="skill-categories d-flex flex-column gap-5 mt-5">
+            <div class="skill-category" id="frontend-category">
+              <h3 class="skill-category-title">Frontend</h3>
+              <div class="skill-list">
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  />
+
+                  <p class="skill-name">HTML</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                  />
+
+                  <p class="skill-name">CSS</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  />
+
+                  <p class="skill-name">JavaScript</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+                  />
+
+                  <p class="skill-name">Bootstrap</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                  />
+
+                  <p class="skill-name">React</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" id="backend-category">
+              <h3 class="skill-category-title">Backend</h3>
+              <div class="skill-list">
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                  />
+
+                  <p class="skill-name">PHP</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                  />
+
+                  <p class="skill-name">MySQL</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" id="programming-category">
+              <h3 class="skill-category-title">Programming Languages</h3>
+              <div class="skill-list">
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                  />
+                  <p class="skill-name">PHP</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  />
+                  <p class="skill-name">JavaScript</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" id="framework-category">
+              <h3 class="skill-category-title">Frameworks</h3>
+              <div class="skill-list">
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                  />
+
+                  <p class="skill-name">Laravel</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+                  />
+                  <p class="skill-name">Bootstrap</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" id="tool-category">
+              <h3 class="skill-category-title">Tools</h3>
+              <div class="skill-list">
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                  />
+                  <p class="skill-name">Git</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                  />
+                  <p class="skill-name">GitHub</p>
+                </div>
+                <div class="skill-card">
+                  <img src="src/assets/images/Icons/xampp.png" />
+                  <p class="skill-name">Xampp</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                  />
+                  <p class="skill-name">VS Code</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg"
+                  />
+                  <p class="skill-name">Canva</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="src/assets/images/Icons/microsoft_office_excel.png"
+                  />
+                  <p class="skill-name">Microsoft Excel</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="src/assets/images/Icons/microsoft_office_word.png"
+                  />
+                  <p class="skill-name">Microsoft Word</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" id="learning-category">
+              <h3 class="skill-category-title">Learning</h3>
+              <div class="skill-list">
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                  />
+
+                  <p class="skill-name">Laravel</p>
+                </div>
+                <div class="skill-card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                  />
+
+                  <p class="skill-name">React</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="portfolio-section" class="tech-stack-section">
+      <section id="portfolio" class="portfolio p-5-5">
         <div class="container">
           <div class="section-heading text-center mb-5">
             <span class="section-label">Portfolio Showcase</span>
@@ -268,6 +559,14 @@
               This section brings together the work I’ve done, the knowledge
               I’ve gained, and the places I’ve contributed.
             </p>
+          </div>
+
+          <div class="portfolio-filters">
+            <div class="portfolio-filter">
+              <label for="">Certificate/s</label>
+            </div>
+            <div class="portfolio-filter">Project/s</div>
+            <div class="portfolio-filter">Experience/s</div>
           </div>
         </div>
       </section>
@@ -320,6 +619,35 @@
           nav.addEventListener("click", function () {
             navLinks.forEach((a) => a.classList.remove("active"));
             this.classList.add("active");
+          });
+        });
+      });
+    </script>
+
+    <!-- Filter Script -->
+    <script>
+      const skillOptions = document.querySelectorAll(
+        'input[name="skills-options"]',
+      );
+
+      const skillCategory = document.querySelectorAll(".skill-category");
+
+      skillOptions.forEach((option) => {
+        option.addEventListener("change", () => {
+          const selectedOption = option.value;
+
+          skillCategory.forEach((category) => {
+            category.style.display =
+              selectedOption === "all" ||
+              category.id === `${selectedOption}-category`
+                ? "block"
+                : "none";
+          });
+
+          skillOptions.forEach((input) => {
+            const label = document.querySelector(`label[for="${input.id}"]`);
+
+            label.classList.toggle("active", input.checked);
           });
         });
       });
