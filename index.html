@@ -34,15 +34,19 @@
                 >Home</a
               >
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#tech-stack">Stack</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
+
             <!-- <li class="nav-item">
               <a class="nav-link" href="#project-section">Project</a>
             </li>
@@ -69,10 +73,13 @@
           class="information-container d-flex flex-column align-items-center gap-3"
         >
           <h2 class="name fs-2 fw-bold">Shantal I. Gregorio</h2>
+
           <h1 class="hero-title-badge">Software Engineer</h1>
+
           <h2 class="hero-subtitle fs-3 fw-semibold">
             Backend Developer | PHP, JavaScript
           </h2>
+
           <p class="hero-tagline fs-6 fw-normal">
             Delivering reliable web apps with PHP, JavaScript, and MySQL —
             always learning and growing
@@ -86,6 +93,7 @@
           >
             <i class="bi bi-facebook fs-3"></i>
           </a>
+
           <a
             href="https://github.com/shantal-20"
             target="_blank"
@@ -93,6 +101,7 @@
           >
             <i class="bi bi-github fs-3"></i>
           </a>
+
           <a
             href="https://wa.me/09204619437"
             class="social-links whatsapp"
@@ -100,6 +109,7 @@
           >
             <i class="bi bi-whatsapp fs-3"></i>
           </a>
+
           <a
             href="https://www.linkedin.com/in/shtnl/"
             target="_blank"
@@ -119,6 +129,7 @@
           >
             <i class="bi bi-folder2 me-1"></i> View Projects
           </button>
+
           <button
             class="btn btn-warning fw-medium rounded"
             id="download-resume-btn"
@@ -276,110 +287,68 @@
           </div>
 
           <div class="skill-filters d-flex gap-3 justify-content-evenly">
-            <div class="skill-filter">
-              <label
-                for="all-option"
-                class="btn btn-outline-secondary active w-100"
-                >All</label
-              >
-              <input
-                type="radio"
-                name="skills-options"
-                id="all-option"
-                class="skill-filter-input btn-check"
-                value="all"
-                autocomplete="off"
-              />
-            </div>
-            <div class="skill-filter">
-              <label
-                for="frontend-option"
-                class="btn btn-outline-secondary w-100"
-                >Frontend
-              </label>
-              <input
-                type="radio"
-                name="skills-options"
-                id="frontend-option"
-                value="frontend"
-                class="skill-filter-input btn-check"
-                autocomplete="off"
-              />
-            </div>
-            <div class="skill-filter">
-              <label
-                for="backend-option"
-                class="btn btn-outline-secondary w-100"
-              >
-                Backend
-              </label>
-              <input
-                type="radio"
-                name="skills-options"
-                id="backend-option"
-                value="backend"
-                class="skill-filter-input btn-check"
-                autocomplete="off"
-              />
-            </div>
-            <div class="skill-filter">
-              <label
-                for="programming-option"
-                class="btn btn-outline-secondary w-100"
-                >Programming</label
-              >
-              <input
-                type="radio"
-                name="skills-options"
-                id="programming-option"
-                value="programming"
-                class="skill-filter-input btn-check"
-                autocomplete="off"
-              />
-            </div>
-            <div class="skill-filter">
-              <label
-                for="framework-option"
-                class="btn btn-outline-secondary w-100"
-                >Framework</label
-              >
-              <input
-                type="radio"
-                name="skills-options"
-                id="framework-option"
-                value="framework"
-                class="skill-filter-input btn-check"
-                autocomplete="off"
-              />
-            </div>
-            <div class="skill-filter">
-              <label for="tool-option" class="btn btn-outline-secondary w-100"
-                >Tool</label
-              >
-              <input
-                type="radio"
-                name="skills-options"
-                id="tool-option"
-                value="tool"
-                class="skill-filter-input btn-check"
-                autocomplete="off"
-              />
-            </div>
-            <div class="skill-filter">
-              <label
-                for="learning-option"
-                class="btn btn-outline-secondary w-100"
-                >Learning</label
-              >
-              <input
-                type="radio"
-                name="skills-options"
-                value="learning"
-                id="learning-option"
-                class="skill-filter-input btn-check"
-                autocomplete="off"
-              />
-            </div>
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 skill-options active"
+              id="all-option"
+              data-category="all"
+            >
+              All
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 skill-options"
+              id="frontend-option"
+              data-category="frontend"
+            >
+              Frontend
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 skill-options"
+              id="backend-option"
+              data-category="backend"
+            >
+              Backend
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 skill-options"
+              id="progamming-option"
+              data-category="programming"
+            >
+              Programming
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 skill-options"
+              id="framework-option"
+              data-category="framework"
+            >
+              Framework
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 skill-options"
+              id="tool-option"
+              data-category="tool"
+            >
+              Tool
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 skill-options"
+              id="learning-option"
+              data-category="learning"
+            >
+              Learning
+            </button>
           </div>
 
           <div class="skill-categories d-flex flex-column gap-5 mt-5">
@@ -570,24 +539,6 @@
           </div>
         </div>
       </section>
-
-      <!-- <section id="project-section" class="project-section">
-        <div class="container">
-          <div class="section-heading text-center mb-5">
-            <span class="section-label">My Projects</span>
-            <h2 class="section-title">Things I've Built</h2>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience-section" class="project-section">
-        <div class="container">
-          <div class="section-heading text-center mb-5">
-            <span class="section-label">My Experience</span>
-            <h2 class="section-title">Where I've Been</h2>
-          </div>
-        </div>
-      </section> -->
     </main>
 
     <!-- Navigation Script -->
@@ -626,28 +577,26 @@
 
     <!-- Filter Script -->
     <script>
-      const skillOptions = document.querySelectorAll(
-        'input[name="skills-options"]',
-      );
+      const skillOptions = document.querySelectorAll(".skill-options");
 
-      const skillCategory = document.querySelectorAll(".skill-category");
+      const skillCategories = document.querySelectorAll(".skill-category");
 
       skillOptions.forEach((option) => {
-        option.addEventListener("change", () => {
-          const selectedOption = option.value;
+        option.addEventListener("click", () => {
+          const selectedOption = option.dataset.category;
 
-          skillCategory.forEach((category) => {
+          skillOptions.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          option.classList.add("active");
+
+          skillCategories.forEach((category) => {
             category.style.display =
               selectedOption === "all" ||
               category.id === `${selectedOption}-category`
                 ? "block"
                 : "none";
-          });
-
-          skillOptions.forEach((input) => {
-            const label = document.querySelector(`label[for="${input.id}"]`);
-
-            label.classList.toggle("active", input.checked);
           });
         });
       });
