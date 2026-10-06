@@ -8,6 +8,11 @@
   src: url(../fonts/LuckiestGuy-Regular.ttf);
 }
 
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("../fonts/fonts/bootstrap-icons.woff2") format("woff2");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +22,10 @@
 
 .p-5-5 {
   padding: 5.5rem;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 /* Navbar */
@@ -254,10 +263,6 @@
   background-color: #f8f9fa;
 }
 
-.skill-filters .skill-filter {
-  flex: 1;
-}
-
 .skill-category .skill-category-title {
   position: relative;
   font-weight: 800;
@@ -343,4 +348,57 @@
 
 .skill-card .skill-name {
   margin: 0.75rem 0 0;
+}
+
+/* Portofolio Section */
+.portfolio {
+  min-height: 100vh;
+}
+
+.portfolio-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  justify-content: center;
+}
+
+#project-card {
+  flex: 0 0 calc(33.333% - 1.75rem);
+  max-width: calc(33.333% - 1.75rem);
+  --bs-card-border-width: 0;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#project-card img {
+  width: auto;
+  height: 200px;
+}
+
+#project-card .badge-container {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  width: 260px;
+}
+
+.portfolio-section .badge-container .badge {
+  background-color: #4a6fa5; /* #111827 */
+  color: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#project-card .button-container button {
+  font-size: 14px;
+}
+
+.word-setup {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  background-color: #3684fd;
 }

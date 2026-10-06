@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <!-- Bootstrap CSS Link -->
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="src/assets/css/bootstrap.min.css" />
     <!-- Bootstrap Icon Link -->
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="src/assets/css/bootstrap-icons.min.css" />
     <!-- CSS Link -->
     <link rel="stylesheet" href="src/assets/css/style.css" />
     <!-- Devicon Link -->
@@ -466,7 +460,7 @@
                   <p class="skill-name">GitHub</p>
                 </div>
                 <div class="skill-card">
-                  <img src="src/assets/images/Icons/xampp.png" />
+                  <img src="src/assets/images/icon/xampp.png" />
                   <p class="skill-name">Xampp</p>
                 </div>
                 <div class="skill-card">
@@ -483,14 +477,12 @@
                 </div>
                 <div class="skill-card">
                   <img
-                    src="src/assets/images/Icons/microsoft_office_excel.png"
+                    src="src/assets/images/icon/microsoft_office_excel.png"
                   />
                   <p class="skill-name">Microsoft Excel</p>
                 </div>
                 <div class="skill-card">
-                  <img
-                    src="src/assets/images/Icons/microsoft_office_word.png"
-                  />
+                  <img src="src/assets/images/icon/microsoft_office_word.png" />
                   <p class="skill-name">Microsoft Word</p>
                 </div>
               </div>
@@ -521,7 +513,7 @@
 
       <section id="portfolio" class="portfolio p-5-5">
         <div class="container">
-          <div class="section-heading text-center mb-5">
+          <div class="section-heading text-center mb-4">
             <span class="section-label">Portfolio Showcase</span>
             <h2 class="section-title">Steps Toward Growth</h2>
             <p class="section-desc">
@@ -530,12 +522,76 @@
             </p>
           </div>
 
-          <div class="portfolio-filters">
-            <div class="portfolio-filter">
-              <label for="">Certificate/s</label>
+          <div class="portfolio-filters d-flex justify-content-center gap-2">
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 active portfolio-filter d-flex flex-column pt-1 pb-2"
+              data-category="project"
+            >
+              <i class="bi bi-folder2-open fs-1"></i> Project/s
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 portfolio-filter d-flex flex-column pt-1 pb-2"
+              data-category="experience"
+            >
+              <i class="bi bi-briefcase fs-1"></i> Experience/s
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100 portfolio-filter d-flex flex-column pt-1 pb-2"
+              data-category="certificate"
+            >
+              <i class="bi bi-award fs-1"></i> Certificate/s
+            </button>
+          </div>
+
+          <div class="portfolio-body p-5">
+            <!-- Project Display -->
+            <div class="portfolio-section" id="project"></div>
+            <!-- Experience Display -->
+            <div
+              class="portfolio-section"
+              id="experience"
+              style="display: none"
+            >
+              <div class="card experience">
+                <div class="card-body">
+                  <h5 class="card-title mb-1">Intern - WordPress Developer</h5>
+                  <p class="card-text">VastResult Inc.</p>
+                  <span class="word-setup badge rounded-pill">Hybrid</span>
+                  <ul class="card-description">
+                    <li class="card-list">
+                      Developed and maintained company web pages for security
+                      and infrastructure services
+                    </li>
+                    <li class="card-list">
+                      Enhanced UI layout and readability by optimizing banners,
+                      buttons, and typography
+                    </li>
+                    <li class="card-list">
+                      Created SEO-optimized content and graphics to improve
+                      search visibility
+                    </li>
+                  </ul>
+
+                  <div class="badge-container d-flex flex-wrap gap-2">
+                    <span class="badge">WordPress</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">Canva</span>
+                    <span class="badge">SEO</span>
+                    <span class="badge">UI Structuring</span>
+                  </div>
+                </div>
+                <div class="card-footer">February 2026 – May 2026</div>
+              </div>
             </div>
-            <div class="portfolio-filter">Project/s</div>
-            <div class="portfolio-filter">Experience/s</div>
+
+            <div
+              class="portfolio-section"
+              id="certificate"
+              style="display: none"
+            ></div>
           </div>
         </div>
       </section>
@@ -575,7 +631,7 @@
       });
     </script>
 
-    <!-- Filter Script -->
+    <!-- Tech Stack Filter Script -->
     <script>
       const skillOptions = document.querySelectorAll(".skill-options");
 
@@ -601,5 +657,34 @@
         });
       });
     </script>
+
+    <!-- Portfolio Filter Script -->
+    <script>
+      const portfolioFilters = document.querySelectorAll(".portfolio-filter");
+      const portfolioSection = document.querySelectorAll(".portfolio-section");
+
+      portfolioFilters.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const selectedBtn = btn.dataset.category;
+
+          portfolioFilters.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          btn.classList.add("active");
+
+          portfolioSection.forEach((section) => {
+            const selectedSection = section.id;
+            section.style.display =
+              selectedSection === selectedBtn ? "flex" : "none";
+          });
+        });
+      });
+    </script>
+
+    <!-- Displaying Portfolio Information Cards -->
+    <script src="src/js/project.js"></script>
+    <!-- <script src="src/js/experience.js"></script> -->
+    <script src="src/js/certificate.js"></script>
   </body>
 </html>
