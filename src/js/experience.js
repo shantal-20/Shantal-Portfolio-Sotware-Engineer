@@ -20,32 +20,103 @@ const experiences = [
   },
 ];
 
+function renderExperience() {
+  const container = document.getElementById("experience");
+
+  experiences.forEach((exp) => {
+    let [startYear, startMonth] = exp.startDate.split("-");
+    let startDate = new Date(startYear, startMonth - 1).toLocaleString(
+      "default",
+      {
+        month: "long",
+        year: "numeric",
+      },
+    );
+
+    let endDate;
+    if (exp.endDate.toLowerCase() === "present") {
+      endDate = "Present";
+    } else {
+      let [endYear, endMonth] = exp.endDate.split("-");
+      endDate = new Date(endYear, endMonth - 1).toLocaleString("en-US", {
+        month: "long",
+        year: "numeric",
+      });
+    }
+
+    let duration = `${startDate} - ${endDate}`;
+
+    let skillList = "";
+    exp.skills.forEach((skill) => {
+      skillList += `<span class="badge">${skill}</span>`;
+    });
+
+    let descList = "";
+    exp.description.forEach((desc) => {
+      descList += `<li class="card-list">
+                     ${desc}
+                    </li>`;
+    });
+
+    const card = `
+            <div class="card experience" id="experience-card">
+                <div class="card-body">
+                  <h5 class="card-title mb-1 fw-bold">${exp.position}</h5>
+                  <p class="card-text">${exp.company}.</p>
+                  <span class="work-setup badge ${exp.workSetup.toLowerCase()} rounded-5 pad-5"
+                    >${exp.workSetup}</span
+                  >
+                  <ul class="card-description pb-3">
+                    ${descList}
+                  </ul>
+
+                  <div class="badge-container d-flex flex-wrap gap-2">
+                    ${skillList}
+                  </div>
+
+                </div>
+                <div class="card-footer">${duration}</div>
+            </div>
+      `;
+
+    container.innerHTML += card;
+  });
+}
+
 if (experiences && experiences.length > 0) {
   renderExperience();
 } else {
   const container = document.getElementById("experience");
 
   container.innerHTML = `
-    <div class="card experience">
-    <img src="src/assets/images/portfolio/No-Image.png" 
-        class="card-img-top" alt="No Experience Image" />
-
+  <div class="card empty-experience">
     <div class="card-body d-flex flex-column">
         <div>
-        <h5 class="card-title fw-semibold fs-5">No Experience Yet</h5>
-        <p class="card-subtitle fs-6 text-justify mt-3">
-            Details will be added soon.
-        </p>
-        <p class="card-text fs-6 text-justify mt-2">
-            Stay tuned for updates.
-        </p>
+            <span class="empty-status">
+                <span class="status-dot"></span>
+                Getting started
+            </span>
+            <h5 class="card-title fw-semibold">
+                No Experience Yet
+            </h5>
+            <p class="card-subtitle mt-2">
+                This section will outline professional roles and achievements. Future experiences will showcase responsibilities, growth, and career progression.
+            </p>
+            <p class="card-text mt-2">
+                Entries will be added as new opportunities are undertaken.
+            </p>
         </div>
-        <div class="mt-auto">
-        <div class="badge-container mt-5">
-            <span class="badge bg-secondary">N/A</span>
-        </div>
+
+        <div class="mt-auto pt-4">
+            <div class="badge-container">
+                <span class="badge bg-secondary">Coming soon</span>
+            </div>
         </div>
     </div>
-    <div class="card-footer text-body-secondary">Duration: —</div>
-    </div>`;
+
+    <div class="card-footer">
+        <span>Experience timeline</span>
+        <span class="empty-duration">—</span>
+    </div>
+</div>`;
 }

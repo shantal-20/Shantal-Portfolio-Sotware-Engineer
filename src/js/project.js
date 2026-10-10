@@ -4,32 +4,18 @@ let projects = [
     desc: `A web-based system for managing event reservation, hotel
               accommodations, and resort pool bookings at Mamyr Resort in
               San Ildefonso, Bulacan`,
-    language: {
-      HTML: true,
-      CSS: true,
-      Bootstrap: true,
-      JavaScript: true,
-      PHP: true,
-      MySQL: true,
-    },
+    language: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL"],
     date: "2025-12",
-    image: "src/assets/images/portfolio/Mamyr-System.png",
+    image: "src/assets/images/portfolio/project/Mamyr-System.png",
   },
   {
     title: "Grade Weighted Average (GWA) Calculator",
     desc: `A web-based tool designed to help students compute their Grade
                   Weighted Average with precision. It simplifies grade tracking
                   by allowing easy input of subjects, units, and grades.`,
-    language: {
-      HTML: true,
-      CSS: true,
-      Bootstrap: true,
-      JavaScript: true,
-      PHP: false,
-      MySQL: false,
-    },
+    language: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     date: "2025-06",
-    image: "src/assets/images/portfolio/GWA-Calc.png",
+    image: "src/assets/images/portfolio/project/GWA-Calc.png",
   },
 ];
 
@@ -37,18 +23,9 @@ function renderProjects() {
   const container = document.getElementById("project");
 
   projects.forEach((proj) => {
-    const [year, month] = proj.date.split("-");
-    const date = new Date(year, month - 1).toLocaleString("default", {
-      month: "long",
-      year: "numeric",
-    });
-    // console.log("Date:" + date);
-    let programmingList = "";
-    Object.keys(proj.language).forEach((prog) => {
-      if (proj.language[prog]) {
-        programmingList += `<span class="badge">${prog}</span>`;
-      }
-    });
+    const date = formatMonthYear(proj.date);
+
+    let programmingList = renderBadges(proj.language);
 
     const card = `
       <div class="card project" id="project-card">
@@ -60,7 +37,7 @@ function renderProjects() {
             <p class="card-text fs-6 text-justify mt-3">${proj.desc}</p>
           </div>
           <div class="mt-auto">
-            <div class="badge-container mt-5">${programmingList}</div>
+            <div class="badge-container d-flex flex-wrap gap-1 mt-5" style="width: 250px">${programmingList}</div>
             <div class="button-container mt-3">
               <button type="button" class="btn btn-outline-primary">
                 View <i class="bi bi-arrow-up-right"></i>
@@ -86,28 +63,23 @@ if (projects && projects.length > 0) {
 } else {
   const container = document.getElementById("project");
 
-  container.innerHTML = `<div class="card project" id="project-card">
+  container.innerHTML = `<div class="card empty-project" >
   <img src="src/assets/images/portfolio/No-Image.png" 
-       class="card-img-top" alt="No Project Image" />
+      class="card-img-top" alt="No Project Image" />
 
   <div class="card-body d-flex flex-column">
     <div>
       <h5 class="card-title fw-semibold fs-5">No Project Available</h5>
       <p class="card-text fs-6 text-justify mt-3">
-        Details will be added soon.
+        This section will highlight completed works and technical contributions. Future projects will demonstrate applied skills and problem‑solving capabilities.
+      </p>
+      <p class="card-text fs-6 text-justify mt-2">
+        Projects will be added as development milestones are completed.
       </p>
     </div>
     <div class="mt-auto">
-      <div class="badge-container mt-5">
+      <div class="badge-container d-flex flex-wrap gap-1 mt-5" style="width: 250px">
         <span class="badge bg-secondary">No Tech Listed</span>
-      </div>
-      <div class="button-container mt-3">
-        <button type="button" class="btn btn-outline-secondary" disabled>
-          View
-        </button>
-        <button type="button" class="btn btn-secondary" disabled>
-          Show Details
-        </button>
       </div>
     </div>
   </div>
